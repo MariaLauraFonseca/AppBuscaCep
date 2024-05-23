@@ -1,20 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+namespace BuscaCep.Views;
 
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-namespace BuscaCep.Views
+public partial class BuscaCepPorLogradouro : ContentPage
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BuscaCepPorLogradouro : ContentView
-    {
-        public BuscaCepPorLogradouro()
-        {
-            InitializeComponent();
-        }
-    }
+	public BuscaCepPorLogradouro()
+	{
+		InitializeComponent();
+	}
 }

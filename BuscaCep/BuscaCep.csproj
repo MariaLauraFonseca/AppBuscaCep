@@ -57,37 +57,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Remove="Views\BairrosPorCidade1.xaml" />
-	  <MauiXaml Remove="Views\BuscaCepPorLogradouro.xaml" />
-	  <MauiXaml Remove="Views\Menu.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Include="Views\BairrosPorCidade1.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Views\BuscaCepPorLogradouro.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Views\Menu.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\BairrosPorCidade1.xaml.cs">
-	    <DependentUpon>BairrosPorCidade1.xaml</DependentUpon>
+	  <Compile Update="Views\BuscaCepPorLogradouro.xaml.cs">
+	    <DependentUpon>BuscaCepPorLogradouro.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\BairrosPorCidadexaml.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\BuscaCepPorLogradouro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Menu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
