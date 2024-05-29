@@ -63,13 +63,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\BairrosPorCidade.xaml.cs">
+	    <DependentUpon>BairrosPorCidade.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\BuscaCepPorLogradouro.xaml.cs">
 	    <DependentUpon>BuscaCepPorLogradouro.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\BairrosPorCidadexaml.xaml">
+	  <MauiXaml Update="Views\BairrosPorCidade.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\BuscaCepPorLogradouro.xaml">
