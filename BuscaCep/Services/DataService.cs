@@ -20,7 +20,7 @@ namespace BuscaCep.Services
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
 
-                    end = JsonConverter.DeserializeObject<Endereco>(json);
+                    end = JsonConvert.DeserializeObject<Endereco>(json);
                 }
                 else
                     throw new Exception(response.RequestMessage.Content.ToString());
@@ -41,7 +41,7 @@ namespace BuscaCep.Services
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
 
-                    arr_bairros = JsonConverter.DeserializeObject<List<Bairro>>(json);
+                    arr_bairros = JsonConvert.DeserializeObject<List<Bairro>>(json);
                 }
                 else
                     throw new Exception(response.RequestMessage.Content.ToString());
@@ -81,7 +81,7 @@ namespace BuscaCep.Services
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
 
-                    arr_logradouros = jsonConvert.DeserializeObject<List<Logradouro>>(json);
+                    arr_logradouros = JsonConvert.DeserializeObject<List<Logradouro>>(json);
                 }
                 else
                     throw new Exception(response.RequestMessage.Content.ToString());
@@ -103,7 +103,7 @@ namespace BuscaCep.Services
                     arr_ceps = JsonConvert.DeserializeObject<List<Cep>>(json);
                 }
                 else 
-                    throw new Exception(response.Request.Content.ToString());
+                    throw new Exception(response.Content.ToString());
             }
             return arr_ceps;
         }
